@@ -8,20 +8,20 @@ class Anagram
     @word = word
   end
   
-  def match(array)
-    new_array = []
-    array.select do |word|
-      if word.split(" ").sort == @word.split(" ").sort
-        new_array << @word
-      end
-      binding.pry
-    end
-    new_array
-  end
-  
   # def match(array)
-  #   %w(array)
-  #   binding.pry
+  #   new_array = []
+  #   array.select do |word|
+  #     if word.split(" ").sort == @word.split(" ").sort
+  #       new_array << @word
+  #     end
+  #     binding.pry
+  #   end
+  #   new_array
   # end
   
+  def match(array)
+    array.select do |word| 
+      word.split("").sort == @word.split("").sort
+    end
+  end
 end
