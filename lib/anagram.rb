@@ -25,5 +25,10 @@ class Anagram
     end
   end
   
-  
+  def match(array)
+    array.select {|x| x.split("").sort == @name.split("").sort}
+  end   
+
 end
+
+asdflkasjd
